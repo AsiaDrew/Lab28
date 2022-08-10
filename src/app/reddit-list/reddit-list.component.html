@@ -1,8 +1,10 @@
-<form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
-  Subreddit:<input type="text" name="subreddit" ngModel />
-  <button>Search</button>
-</form>
-<app-reddit-post
-  *ngFor="let c of values.data.children"
-  [Children]="c"
-></app-reddit-post>
+<div style="text-align: center">
+  <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+    Subreddit:<input type="text" name="subreddit" ngModel />
+    <button>Search</button>
+  </form>
+  <app-reddit-post
+    *ngFor="let c of values.data.children"
+    [Children]="c"
+  ></app-reddit-post>
+</div>

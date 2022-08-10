@@ -1,7 +1,14 @@
-<div>
+<div class="postContainer">
   <a href="https://www.reddit.com/{{ Children.data.permalink }}">
-    <h1>{{ Children.data.title }}</h1>
-    <img src="{{ Children.data.thumbnail }}" />
+    <h3>{{ Children.data.title }}</h3>
+    <img
+      class="image"
+      class="centerImage"
+      src="{{ Children.data.thumbnail }}"
+      height="500px"
+      width="auto"
+      style="width: 40%; height: 40%; margin-left: 25%"
+    />
   </a>
   <p>{{ Children.data.title }}</p>
 </div>

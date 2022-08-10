@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+}
+
+p{
+    width: 90%;
+    margin: auto;
+
+}
+
+@media only screen and (min-width: 600px){
+    .image{
+        width: 400px;
+        margin: auto;
+    }
+    .centerImage{
+        display: flex;
+        justify-content: center;
+    }
+}
