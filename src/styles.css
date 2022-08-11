@@ -1,6 +1,52 @@
 *{
     font-family: 'Dosis', sans-serif; 
 }
-html{
-    background-color: #F3F1F7;
+
+body {
+    background: linear-gradient(to right,  #fefbd8, #36486b );
+    height: 100vw;
+    margin: -8px;
+    padding-top: 2%;
+    }
+
+    a {
+    color: black;
+    text-decoration: none; /* no underline */
+    }
+
+  .postContainer{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    }
+
+
+p{
+  width: 90%;
+  margin: auto;
 }
+
+div {
+  font-weight: 300;
+  width:70%;
+  margin-left: 15%;
+  padding:1%;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); 
+  text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px){
+    
+    .centerImage{
+        display: flex;
+        justify-content: center;
+    }
+}
+

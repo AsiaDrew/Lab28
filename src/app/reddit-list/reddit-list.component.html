@@ -1,10 +1,13 @@
-<div style="text-align: center">
-  <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
-    Subreddit:<input type="text" name="subreddit" ngModel />
-    <button>Search</button>
-  </form>
-  <app-reddit-post
-    *ngFor="let c of values.data.children"
-    [Children]="c"
-  ></app-reddit-post>
-</div>
+<form
+  #searchForm="ngForm"
+  (ngSubmit)="search(searchForm)"
+  style="text-align: center"
+>
+  <input type="text" name="subreddit" ngModel />
+  <button>Search</button>
+</form>
+<br />
+<app-reddit-post
+  *ngFor="let c of values.data.children"
+  [Children]="c"
+></app-reddit-post>
