@@ -9,17 +9,26 @@ import { RedditService } from '../reddit.service';
   styleUrls: ['./reddit-list.component.css']
 })
 export class RedditListComponent implements OnInit {
-
+  status:string ="";
   values: Reddit = {} as Reddit;
   constructor(private apiService: RedditService) { }
 
   ngOnInit(): void {
     this.populateReddit("aww");
   }
-  populateReddit(subreddit:string): void {
-    this.apiService.getReddit(subreddit).subscribe((response: any) =>{
+  populateReddit(subReddit:string): void {
+    this.apiService.getReddit(subReddit).subscribe(
+      (response: Reddit) =>{
       this.values = response;
-    });
+
+      this.values.data.children.splice(10);
+      this.status= "";
+    },
+    (error:any) => {
+      console.log(error);
+      this.status= "Could not find subreddit";
+    }
+    );
   }
   search(form:NgForm):void{
     this.populateReddit(form.form.value.subreddit);

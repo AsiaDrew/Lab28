@@ -6,7 +6,10 @@
   <input type="text" name="subreddit" ngModel />
   <button>Search</button>
 </form>
+<p style="text-align: center">{{ status }}</p>
 <br />
+<h1>r/{{ values.data.children[0].data.subreddit }}</h1>
+
 <app-reddit-post
   *ngFor="let c of values.data.children"
   [Children]="c"

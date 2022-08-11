@@ -7,6 +7,7 @@ import { RedditListComponent } from './reddit-list/reddit-list.component';
 import { RedditPostComponent } from './reddit-post/reddit-post.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [];
 
@@ -20,7 +21,8 @@ const routes: Routes = [];
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgbModule
   ],
   exports: [
     RouterModule
